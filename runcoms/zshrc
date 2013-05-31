@@ -30,3 +30,6 @@ compdef git-achievements=git
 
 # FOR Node.js
 export PATH=$HOME/.local/bin:$PATH
+
+# pandoc
+export PATH=$HOME/.cabal/bin:$PATH
