@@ -12,24 +12,6 @@ fi
 
 # Customize to your needs...
 
-if [[ -f ${HOME}"/.aliases" ]]; then
-  source ${HOME}"/.aliases"
+if [[ -f ${HOME}"/dotfiles/my.zshrc" ]]; then
+  source ${HOME}"/dotfiles/my.zshrc"
 fi
-if [[ -f ${HOME}"/.git-flow-completion.zsh" ]]; then
-  source ${HOME}"/.git-flow-completion.zsh"
-fi
-
-export PATH=${PATH}:/home/hasssan/apps/android-sdk-linux/tools
-export PATH=${PATH}:/home/hasssan/apps/android-sdk-linux/platform-tools
-export PATH=/home/hasssan/.git-achievements:$PATH                               
-alias git="git-achievements"
-compdef git-achievements=git
-
-# PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
-
-# FOR Node.js
-export PATH=$HOME/.local/bin:$PATH
-
-# pandoc
-export PATH=$HOME/.cabal/bin:$PATH
