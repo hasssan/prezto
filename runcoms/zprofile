@@ -4,4 +4,6 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
-
+if [[ -f ${HOME}"/dotfiles/profile" ]]; then
+  source ${HOME}"/dotfiles/profile"
+fi
