@@ -103,6 +103,7 @@ function prompt_paradox_precmd {
 
 function prompt_paradox_preexec {
   _prompt_paradox_start_time="$SECONDS"
+  python-info
 }
 
 function prompt_paradox_setup {
@@ -143,11 +144,14 @@ function prompt_paradox_setup {
     'ref' '$(coalesce "%b" "%p" "%c")' \
     'status' '%s%D%A%B%S%a%d%m%r%U%u'
 
+  # %v - virtualenv name.
+  zstyle ':prezto:module:python:info:virtualenv' format '%F{green}⌈%F{red}venv:%v%F{green}⌋%f'
+
   # Define prompts.
   PROMPT='
 ${(e)$(prompt_paradox_build_prompt)}
  ${editor_info[keymap]} '
-  RPROMPT='%F{blue}[%F{green}%D{%H:%M:%S}%F{blue}]%f'
+  RPROMPT='$python_info[virtualenv]%F{blue}[%F{green}%D{%H:%M:%S}%F{blue}]%f'
   SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
 }
 
