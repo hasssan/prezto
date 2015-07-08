@@ -40,6 +40,7 @@ zstyle ':prezto:load' pmodule \
   'rsync' \
   'node' \
   'python' \
+  'fasd' \
 
 #
 # Editor
