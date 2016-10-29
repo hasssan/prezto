@@ -41,6 +41,7 @@ zstyle ':prezto:load' pmodule \
   'node' \
   'python' \
   'fasd' \
+  'gpg'
 
 #
 # Autosuggestions
